@@ -1,0 +1,58 @@
+<nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+    <div class="alert alert-success msg" style="display:none;width: 50%;
+                margin: auto;
+                text-align: center;
+                position: absolute;
+                top: 10px;
+                left: 25%;
+                opacity: 0;
+                z-index: 1;"><h5 id="msgH5"><?=$msg ?? '' ?></h5></div>
+    <a class="navbar-brand" href="../dist/index.php">Ambo oil Inventory manager</a>
+    <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#" style="margin-left: 50px"><i class="fa fa-bars"></i></button>
+    <!-- Navbar Search-->
+    <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+        <div class="input-group">
+            <input class="form-control" type="text" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2" />
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+    </form>
+    <!-- Navbar-->
+    <ul class="navbar-nav ml-auto ml-md-0">
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user fa-fw"></i></a>
+            <div class="dropdown-menu dropdown-menu-right" id="drpa" aria-labelledby="userDropdown" style="background: #7E8286; color: white;">
+                <div class="avatar" style="display: flex; padding: 7px">
+                    <img src="../dist/assets/img/avatar1.png" height="50" width="50" style="border-radius: 50%; margin-right: 10px;">
+                    <div class="profile" style=" padding-bottom: 0;">
+                        <p><?= $usuario['lastName']."<br>".$usuario['firstName'] ?></p>
+                    </div>
+                </div>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="../dist/assets/php/backup.php" style="color: white;">Activity Log</a>
+                <a class="dropdown-item" href="../dist/assets/php/logout.php" id="logOut" style="color: white;">Logout</a>
+            </div>
+        </li>
+    </ul>
+</nav>
+
+<script>
+    $(document).ready(function () {
+        $('#userDropdown').click(function () {
+            $('.dropdown-menu').toggle();
+        });
+
+
+        $('#logOut').click(function (e) {
+            var logOut = confirm('Are you sure you want to Log Out?');
+
+            if (!logOut){
+                e.preventDefault();
+            }
+        });
+
+
+    });
+
+</script>
