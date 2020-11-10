@@ -118,7 +118,7 @@ if (isset($_GET['edit']) and isset($_GET['id'])) {
                                 <div class="card bg-primary text-white mb-4">
                                     <div class="card-body pad"><?php outs_prod(); ?></div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="<?= $curUser == 'admin' ? 'outstanding.php' : '#' ?>">View Details</a>
+                                        <a class="small text-white stretched-link" href="<?= $curUser == 'admin' ? 'outstanding.php' : '401.html' ?>">View Details</a>
                                         <div class="small text-white"><i class="fa fa-angle-right"></i></div>
                                     </div>
                                 </div>
