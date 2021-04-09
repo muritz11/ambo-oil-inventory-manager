@@ -1,0 +1,34 @@
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+AddDefaultCharset UTF-8
+Header unset ETag
+FileETag None
+
+ErrorDocument 404.html http://localhost/projects/ambo_oil_ims/404
+
+Options +FollowSymLinks -MultiViews
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+RewriteRule ^login login.php [NC,L,QSA]
+RewriteRule ^register register.php [NC,L,QSA]
+RewriteRule ^inventory inventory.php [NC,L,QSA]
+RewriteRule ^monthly monthly.php [NC,L,QSA]
+RewriteRule ^outstanding outstanding.php [NC,L,QSA]
+RewriteRule ^products products.php [NC,L,QSA]
+RewriteRule ^receive receive_stock.php [NC,L,QSA]
+RewriteRule ^supply supply_stock.php [NC,L,QSA]
+RewriteRule ^home index.php [NC,L,QSA]
+RewriteRule ^users users.php [NC,L,QSA]
+
+RewriteRule ^404 404.html [NC,L,QSA]
+
+#RewriteRule ^find/$ find.php [NC,L,QSA]
+
+</IfModule>
+
+# END WordPress

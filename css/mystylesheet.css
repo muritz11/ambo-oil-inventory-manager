@@ -1,0 +1,79 @@
+
+
+.main-content{
+    display: none;
+}
+
+/* Add animation to "page content" */
+.loader-anime {
+    position: relative;
+    animation-name: animatebottom;
+    animation-duration: 1s
+}
+@keyframes animatebottom {
+    from{ bottom:-100px; opacity:0 }
+    to{ bottom:-10px; opacity:1 }
+}
+
+.bg-primary:hover, .bg-warning:hover,.bg-success:hover,.bg-danger:hover{
+    transform: scale(1.01);
+    transition: transform 1s;
+}
+
+    /*  error/success msg's  */
+.msg{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    position: absolute;
+    top: 10px;
+    left: 25%;
+    opacity: 0;
+    z-index: 1;
+}
+
+
+
+/*  preloader  */
+#loader {
+    position: absolute;
+    left: 40%;
+    top: 40%;
+    z-index: 1;
+    /*margin: -75px 0 0 -75px;*/
+    /*border: 16px solid #f3f3f3;*/
+    border-radius: 50%;
+    /*border-top: 16px solid #3498db;*/
+    width: 120px;
+    height: 120px;
+    opacity: 0.95;
+    /*-webkit-animation: spin 2s linear infinite;*/
+    animation: spin 2s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+.red{
+    color: red;
+}
+
+.marg-bottom{
+    margin-bottom: 40px !important;
+}
+
+
+/*  frm index page  */
+.form{
+    width: 80%;
+    margin: auto;
+    display: none;
+}
+#upd-tab, .breadcrumb{
+    cursor: pointer;
+}
+.after{
+    display: none;
+}
