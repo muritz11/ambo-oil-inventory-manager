@@ -1,3 +1,3 @@
-#Eche's cosmetics
+## Eche's cosmetics
 
 This is an e-commerce project am currently working on...
