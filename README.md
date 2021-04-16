@@ -1,3 +1,4 @@
-## Eche's cosmetics
+## Ambo-oil inventory managment system
 
-This is an e-commerce project am currently working on...
+This is an inventory management project that i'm working on...  
+This is also my first web project.
